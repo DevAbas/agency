@@ -4,6 +4,7 @@
 @import './components/header.scss';
 @import './components/banner.scss';
 @import './components/cases.scss';
+@import './components/navigation.scss';
 
 body,
 html {
@@ -149,5 +150,22 @@ html {
         }
       }
     }
+  }
+}
+
+.App {
+  z-index: 2;
+  transform: translateY(0);
+  position: relative;
+}
+
+.page {
+  height: 100vh;
+  width: 100%;
+  background: $white;
+
+  .row {
+    display: flex;
+    align-items: center;
   }
 }
