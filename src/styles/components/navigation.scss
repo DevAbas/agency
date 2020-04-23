@@ -6,7 +6,6 @@ nav {
   height: 100%;
   overflow: hidden;
   z-index: 1;
-  // display: none;
   background: $yellow;
 
   a {
@@ -63,7 +62,7 @@ nav {
 
       .nav-label {
         margin-bottom: 3rem;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
 
         @include media("<=tablet") {
           font-size: 1rem;

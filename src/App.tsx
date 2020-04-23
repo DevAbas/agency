@@ -42,19 +42,14 @@ const routes: RouteT[] = [
   { path: '/case-studies', name: 'Case studies', Component: CaseStudies },
 ];
 
-type IADimensions = {
-  height: number;
-  width: number;
-};
-
-const initialState: IADimensions = {
-  height: window.innerHeight,
-  width: window.innerWidth,
-};
 const App: React.FC = () => {
-  const [dimensions, setDimensions] = React.useState<IADimensions>(
-    initialState
-  );
+  const [dimensions, setDimensions] = React.useState<{
+    height: number;
+    width: number;
+  }>({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
 
   useEffect(() => {
     gsap.to('body', 0, { css: { visibility: 'visible' } });
@@ -72,7 +67,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Header />
+      <Header dimensions={dimensions} />
       <div className='App'>
         {routes.map(({ path, Component }: RouteT) => (
           <Route key={path} path={path} exact>
