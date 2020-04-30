@@ -42,7 +42,7 @@ const Header: React.FC<IProps & RouteComponentProps<any>> = ({
       <div className='container'>
         <div className='row v-center space-between'>
           <div className='logo'>
-            <NavLink to='/' exact>
+            <NavLink to={`${process.env.PUBLIC_URL}`} exact>
               AGENCY.
             </NavLink>
           </div>

@@ -15,7 +15,7 @@ const Banner: React.FC = () => {
             </div>
           </h2>
           <div className='btn-row'>
-            <a href='/'>
+            <a href={`${process.env.PUBLIC_URL}`}>
               More about us <RightArrow />
             </a>
           </div>
